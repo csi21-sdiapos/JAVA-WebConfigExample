@@ -23,6 +23,8 @@
 	          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
 	          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
 	          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+	         
+	          <li><a href="<c:url value="goToFormCreateAlumno" />" class="btn btn-primary px-2 text-white">Formulario de Registro</a></li>
 	        </ul>
 	
 	        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
@@ -43,23 +45,23 @@
 		<table class="table table-dark table-hover">
  			<thead>
 				<tr>
+					<th scope="col">UUID</th>
+					<th scope="col">DATE</th>
 					<th scope="col">ID</th>
 					<th scope="col">Nombre</th>
 					<th scope="col">Apellidos</th>
-					<th scope="col">Edad</th>
 					<th scope="col">Teléfono</th>
-					<th scope="col">Dirección</th>
 				</tr>
 			</thead>
 			<c:forEach var="alumno" items="${thirdViewModel.alumnos}"> <!-- foreach(alumno in listalumnos) -->
 				<tbody>
 					<tr>
+						<td><c:out value="${alumno.alumno_uuid}" /></td>
+						<td><c:out value="${alumno.alumno_date.getTime()}" /></td>
 						<td><c:out value="${alumno.alumno_id}" /></td>
 						<td><c:out value="${alumno.alumno_nombre}" /></td>
 						<td><c:out value="${alumno.alumno_apellidos}" /></td>
-						<td><c:out value="${alumno.alumno_edad}" /></td>
 						<td><c:out value="${alumno.alumno_telefono}" /></td>
-						<td><c:out value="${alumno.alumno_direccion}" /></td>
 					</tr>
 				</tbody>
 			</c:forEach>

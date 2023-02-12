@@ -95,8 +95,8 @@
 	      <h3 class="float-md-start mb-0">WebConfig</h3>
 	      <nav class="nav nav-masthead justify-content-center float-md-end">
 	        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Index</a>
-	        <a class="nav-link fw-bold py-1 px-0" href="./views/second.jsp">Second View</a>
-	        <a class="nav-link fw-bold py-1 px-0" href="./views/third.jsp">Third View</a>
+	        <a class="nav-link fw-bold py-1 px-0" href="<c:url value="goToSecondView" />">Second View</a>
+	        <a class="nav-link fw-bold py-1 px-0" href="<c:url value="goToThirdView" />">Third View</a>
 	      </nav>
 	    </div>
 	  </header>
@@ -107,10 +107,10 @@
 			Esto es un home hecho con una platilla de Bootstrap v5.2
 		</p>
 	    <p class="lead">
-	      <a href="./views/second.jsp" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Second View</a>
+	      <a href="<c:url value="goToSecondView" />" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Second View</a>
 	    </p>
 	    <p class="lead">
-	      <a href="./views/third.jsp" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Third View</a>
+	      <a href="<c:url value="goToThirdView" />" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Third View</a>
 	    </p>
 	  </main>
 	
